@@ -21,9 +21,15 @@ public class Folder {
     @OneToMany(mappedBy = "folder")
     private List<File> files;
 
-    public Folder(String title) {
+    @JsonIgnoreProperties("folders")
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
+    public Folder(String title, User user) {
         this.title = title;
         this.files = new ArrayList<>();
+        this.user = user;
     }
 
     public Folder() {
