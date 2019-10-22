@@ -2,7 +2,6 @@ package com.codeclan.UserFoldersAndFiles.models;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.apache.catalina.LifecycleState;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -55,7 +54,4 @@ public class User {
         this.folders = folders;
     }
 
-    public void addFolder(Folder folder){
-        this.folders.add(folder);
-    }
 }

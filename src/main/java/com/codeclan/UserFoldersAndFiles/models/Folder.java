@@ -59,7 +59,4 @@ public class Folder {
         this.files = files;
     }
 
-    private void addFile(File file){
-        this.files.add(file);
-    }
 }
